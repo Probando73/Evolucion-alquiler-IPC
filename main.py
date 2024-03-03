@@ -39,10 +39,24 @@ if __name__ == '__main__':
   #### Tabla variaciones ###
 
   meses_alquiler = []
+    
   for x in meses: # Se separan los meses de la tupla.
     meses_alquiler.append(x)
 
-  meses_alquiler.append('Agosto')
-  meses_alquiler.remove('Marzo')
+    meses_alquiler.append('Agosto')
+    meses_alquiler.remove('Marzo')
 
-  print(meses_alquiler)
+    alquiler_rem = {}
+    alquiler_ipc = None
+    alquiler_mep = None
+
+    for k,v in rem.items(): # Se agregan datos al diccionario 
+        monto_alquiler = alquiler
+        contador_mes = 0
+        valor_ajustado =alquiler_rem[meses_alquiler[0]]= monto_alquiler * ((1+v)/100)
+        monto_alquiler = valor_ajustado
+        print(monto_alquiler)
+         
+    tabla_alquiler = 
+      
+    print(meses_alquiler)
