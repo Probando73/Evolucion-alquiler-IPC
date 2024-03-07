@@ -100,14 +100,16 @@ if __name__ == '__main__':
     meses_alquiler.remove('Marzo')
 
     # Instancia de clases
-    obj_ajuste_inflacion = Ajuste_Inflacion(alquiler)
-    obj_ajuste_mep = Ajuste_Mep()
+    obj_ajuste_inflacion_rem = Ajuste_Inflacion(alquiler)
+    obj_ajuste_inflacion_ipc = Ajuste_Inflacion(alquiler)
+    obj_ajuste_mep_rem = Ajuste_Mep()
+    obj_ajuste_mep_ipc = Ajuste_Mep()
 
     # Obtencion de valores ajustados
-    alquiler_rem = obj_ajuste_inflacion.calcular_ajuste_inflacion(**rem)
-    alquiler_ipc = obj_ajuste_inflacion.calcular_ajuste_inflacion(**ipc)
-    alquiler_rem_mep = obj_ajuste_mep.calcular_ajuste_usd(alquiler_rem, **mep)
-    alquiler_rem_ipc = obj_ajuste_mep.calcular_ajuste_usd(alquiler_ipc, **mep)
+    alquiler_rem = obj_ajuste_inflacion_rem.calcular_ajuste_inflacion(**rem)
+    alquiler_ipc = obj_ajuste_inflacion_ipc.calcular_ajuste_inflacion(**ipc)
+    alquiler_rem_mep = obj_ajuste_mep_rem.calcular_ajuste_usd(alquiler_rem, **mep)
+    alquiler_rem_ipc = obj_ajuste_mep_ipc.calcular_ajuste_usd(alquiler_ipc, **mep)
 
     indice_ajuste = ['Aj REM ($)', 'Aj IPC ($)', 'Aj REM/MEP ($)', 'Aj IPC/MEP ($)']
 
